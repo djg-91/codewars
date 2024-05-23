@@ -1,8 +1,6 @@
 '''
 https://www.codewars.com/kata/5a28cf591f7f7019a80000de
 
-    Simple number sequence
-
     In this Kata, you will be given a string of numbers in sequence and your task will be to return the missing number. 
     If there is no number missing or there is an error in the sequence, return -1.
 
