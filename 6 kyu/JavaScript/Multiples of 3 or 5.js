@@ -11,12 +11,12 @@ https://www.codewars.com/kata/514b92a657cdc65150000006
 */
 
 
-function solution(number){
+function solution(number) {
     let result = [];
     
     for (i = 2; i < number; i++) {
-      if (i % 3 == 0 || i % 5 == 0) result.push(i);
+        if (i % 3 == 0 || i % 5 == 0) result.push(i);
     }
   
     return result.length > 0 ? result.reduce((acc, val) => acc + val, 0) : 0;
-  }
+}

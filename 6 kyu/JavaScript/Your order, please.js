@@ -14,11 +14,11 @@ https://www.codewars.com/kata/55c45be3b2079eccff00010f
 */
 
 
-function order(words){
+function order(words) {
     let result = [];
     
     words.split(/\s+/).forEach(word => {
-      result[Number(word.match(/\d/))] = word;
+        result[Number(word.match(/\d/))] = word;
     })
                                
     return result.length > 1 ? result.slice(1).join(" ") : "";

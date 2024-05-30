@@ -23,17 +23,17 @@ function productFib(prod) {
     let result = false;
     
     while (true) {
-      fibi = fibo.slice(-2);
-      let fibi_result = fibi[0] * fibi[1];
-      console.log(fibi);
-      if (fibi_result == prod) {
-        result = true;
-        break;
-      } else if (fibi_result > prod) {
-        result = false;
-        break;
-      }
-      fibo.push(fibi.reduce((acc, val) => acc + val, 0));
+        fibi = fibo.slice(-2);
+        let fibi_result = fibi[0] * fibi[1];
+        console.log(fibi);
+        if (fibi_result == prod) {
+            result = true;
+            break;
+        } else if (fibi_result > prod) {
+            result = false;
+            break;
+        }
+        fibo.push(fibi.reduce((acc, val) => acc + val, 0));
     }
     return [fibi[0], fibi[1], result];
-  }
+}

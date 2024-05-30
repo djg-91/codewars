@@ -9,20 +9,21 @@ https://www.codewars.com/kata/54d512e62a5e54c96200019e
     Example: n = 86240 should return "(2**5)(5)(7**2)(11)"
 */
 
-function primeFactors(n){
+
+function primeFactors(n) {
     let result = {};
     let result_str = "";
     let i = 2;
     while (i <= n) {
-      if (n % i == 0) {
-        result[i] = i in result ? result[i] + 1 : 1;
-        n = n / i;
-      } else {
-        i++;
-      }
+        if (n % i == 0) {
+            result[i] = i in result ? result[i] + 1 : 1;
+            n = n / i;
+        } else {
+          i++;
+        }
     }
     for (let k in result) {
-      result_str += result[k] > 1 ? `(${k}**${result[k]})` : `(${k})`;
+        result_str += result[k] > 1 ? `(${k}**${result[k]})` : `(${k})`;
     }
     return result_str;
-  }
+}
