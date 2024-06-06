@@ -25,8 +25,9 @@ https://www.codewars.com/kata/5ac698cdd325ad18a3000170
 
     So, your job:
 
-        - Return name, won, and lost columns displaying the name, total number of wins and total number of losses. 
-        Group by the fighter's name.
+        - Return name, won, and lost columns displaying the name, 
+        total number of wins and total number of losses. 
+        - Group by the fighter's name.
         - Do not count any wins or losses where the winning move was Hadoken, Shouoken or Kikoken.
         - Order from most-wins to least
         - Return the top 6. Don't worry about ties.
@@ -45,8 +46,6 @@ WHERE
   b.move NOT IN (
     'Hadoken', 'Shouoken', 'Kikoken'
   )
-GROUP BY
-  a.name
-ORDER BY 
-  won DESC
+GROUP BY a.name
+ORDER BY won DESC
 LIMIT 6;

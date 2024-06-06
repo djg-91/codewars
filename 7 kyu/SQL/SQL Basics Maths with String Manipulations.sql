@@ -4,6 +4,7 @@ https://www.codewars.com/kata/594901ba44645fd7bd00005f
     Given a demographics table in the following format:
 
     demographics table schema
+    
         id
         name
         birthday
