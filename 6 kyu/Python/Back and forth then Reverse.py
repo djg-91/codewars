@@ -32,6 +32,7 @@ https://www.codewars.com/kata/60cc93db4ab0ae0026761232
 
 from collections import deque
 
+
 def arrange(s):
     S = deque(s)
     T = []

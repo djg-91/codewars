@@ -29,6 +29,7 @@ https://www.codewars.com/kata/51fc12de24a9d8cb0e000001
 
 from string import ascii_uppercase
 
+
 def valid_ISBN10(isbn):
     if len(str(isbn)) != 10:
         return False
