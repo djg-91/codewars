@@ -39,13 +39,13 @@ https://www.codewars.com/kata/593ef0e98b90525e090000b9
 
 
 SELECT 
-  top.id, heads, legs, arms, tails,
-  CASE 
-    WHEN heads != legs THEN 'BEAST'
-    ELSE 'WEIRDO'
-  END AS species
+    top.id, heads, legs, arms, tails,
+    CASE 
+        WHEN heads != legs THEN 'BEAST'
+        ELSE 'WEIRDO'
+    END AS species
 FROM 
-  top_half top
-    INNER JOIN bottom_half bot
-      ON top.id = bot.id
+    top_half top
+        INNER JOIN bottom_half bot
+            ON top.id = bot.id
 ORDER BY species;

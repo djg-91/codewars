@@ -21,11 +21,11 @@ https://www.codewars.com/kata/580918e24a85b05ad000010c
 
 
 SELECT 
-  a.id, 
-  a.name, 
-  COUNT(*) AS toy_count
+    a.id, 
+    a.name, 
+    COUNT(*) AS toy_count
 FROM 
-  people a
-    INNER JOIN toys b 
-      ON a.id = b.people_id
+    people a
+        INNER JOIN toys b 
+            ON a.id = b.people_id
 GROUP BY a.id, a.name;

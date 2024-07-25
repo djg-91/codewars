@@ -26,19 +26,18 @@ https://www.codewars.com/kata/589cf45835f99b2909000115
 
 
 WITH dates AS (
-  SELECT 
+    SELECT 
     CAST(created_at AS DATE) AS date,
     COUNT(*) AS count
-  FROM posts
-  GROUP BY date
+    FROM posts
+    GROUP BY date
 )
 SELECT
-  t1.date, t1.count, 
-  CAST(
-    (SELECT SUM(t2.count) 
-    FROM dates t2
-    WHERE t2.date <= t1.date) 
-    AS INTEGER
-  ) AS total
+    t1.date, t1.count, 
+    CAST(
+        (SELECT SUM(t2.count) 
+        FROM dates t2
+        WHERE t2.date <= t1.date) AS INTEGER
+    ) AS total
 FROM dates t1
 ORDER BY date;

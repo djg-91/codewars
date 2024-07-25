@@ -32,7 +32,7 @@ https://www.codewars.com/kata/58113c03009b4fcc66000d29
 SELECT a.id, a.name 
 FROM departments a
 WHERE a.id IN (
-  SELECT b.department_id 
-  FROM sales b
-  WHERE b.price > 98
+    SELECT b.department_id 
+    FROM sales b
+    WHERE b.price > 98
 );

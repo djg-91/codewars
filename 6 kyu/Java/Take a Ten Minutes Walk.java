@@ -19,31 +19,31 @@ https://www.codewars.com/kata/54da539698b8a2ad76000228
 
 
 public class TenMinWalk {
-  public static boolean isValid(char[] walk) {
-    int[] trip = {0, 0};
-    int min = 10;
-    
-    String result = new String();
-   
-    for (char c : walk) {
-      result += Character.toString(c);
-      min -= 1;
-      switch (Character.toString(c)) {
-          case "n":
-            trip[0] += 1;
-            break;
-          case "s":
-            trip[0] -= 1;
-            break;
-          case "e":
-            trip[1] += 1;
-            break;
-          case "w":
-            trip[1] -= 1;
-            break;
-      }      
+    public static boolean isValid(char[] walk) {
+        int[] trip = {0, 0};
+        int min = 10;
+
+        String result = new String();
+
+        for (char c : walk) {
+            result += Character.toString(c);
+            min -= 1;
+            switch (Character.toString(c)) {
+                case "n":
+                    trip[0] += 1;
+                    break;
+                case "s":
+                    trip[0] -= 1;
+                    break;
+                case "e":
+                    trip[1] += 1;
+                    break;
+                case "w":
+                    trip[1] -= 1;
+                    break;
+            }      
+        }
+
+        return (min >= 0) && (min < 8) && trip[0] == 0 && trip[1] == 0;
     }
-        
-    return (min >= 0) && (min < 8) && trip[0] == 0 && trip[1] == 0;
-  }
 }

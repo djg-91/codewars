@@ -42,13 +42,13 @@ https://www.codewars.com/kata/5817b124e7f4576fd00020a2
 
 
 WITH result AS (
-SELECT f.title, COUNT(*) AS films
-FROM 
-  film f
-    JOIN film_actor fa
-      ON fa.film_id = f.film_id
-      AND fa.actor_id IN (105, 122)
-GROUP BY f.title
+    SELECT f.title, COUNT(*) AS films
+    FROM 
+        film f
+            JOIN film_actor fa
+                ON fa.film_id = f.film_id
+                AND fa.actor_id IN (105, 122)
+    GROUP BY f.title
 )
 SELECT title FROM result
 WHERE films > 1

@@ -23,13 +23,13 @@ https://www.codewars.com/kata/58094559c47d323ebd000035
 
 
 SELECT 
-  p.id, p.name, 
-  COUNT(s.sale) AS sale_count,
-  SUM(s.price) AS sale_rank
+    p.id, p.name, 
+    COUNT(s.sale) AS sale_count,
+    SUM(s.price) AS sale_rank
 FROM 
-  people p 
-    INNER JOIN sales s 
-      ON s.people_id = p.id
+    people p 
+        INNER JOIN sales s 
+            ON s.people_id = p.id
 GROUP BY 
-  p.id, p.name
+    p.id, p.name
 ORDER BY sale_rank;

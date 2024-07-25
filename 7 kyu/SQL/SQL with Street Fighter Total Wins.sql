@@ -35,17 +35,17 @@ https://www.codewars.com/kata/5ac698cdd325ad18a3000170
 
 
 SELECT 
-  a.name, 
-  sum(won) AS won,
-  sum(lost) AS lost
+    a.name, 
+    sum(won) AS won,
+    sum(lost) AS lost
 FROM 
-  fighters a
-    JOIN winning_moves b
-      ON a.move_id = b.id
+    fighters a
+        JOIN winning_moves b
+            ON a.move_id = b.id
 WHERE
-  b.move NOT IN (
-    'Hadoken', 'Shouoken', 'Kikoken'
-  )
+    b.move NOT IN (
+        'Hadoken', 'Shouoken', 'Kikoken'
+    )
 GROUP BY a.name
 ORDER BY won DESC
 LIMIT 6;
